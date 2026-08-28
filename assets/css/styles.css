@@ -62,7 +62,7 @@
 
 *,*::before,*::after{ box-sizing:border-box; }
 .theme-switching, .theme-switching *{ transition:none !important; }
-html{ scroll-behavior:smooth; scroll-padding-top: calc(var(--nav-h) + 90px); }
+html{ scroll-behavior:smooth; scroll-padding-top: calc(var(--nav-h) + 90px); overflow-x:hidden; }
 body{
   margin:0;
   background:var(--bg);
@@ -692,6 +692,12 @@ h1,h2,h3,h4{ font-family:var(--font-head); font-weight:700; line-height:1.05; ma
 
 @media (max-width: 860px){
   :root{ --nav-h:66px; }
+
+  /* En pantallas angostas el contenedor del hero queda mucho más alto que
+     ancho; con object-fit:cover eso termina recortando casi todo el carro
+     a los lados. Bajamos su altura (ligada al ancho, no al alto del celular)
+     para que se vea como un banner y no como un zoom perdido. */
+  .hero{ min-height:clamp(200px, 58vw, 340px); }
   .nav-links{
     position:fixed; top:var(--nav-h); left:0; right:0;
     background:var(--chrome-4); backdrop-filter:blur(14px);
@@ -707,7 +713,7 @@ h1,h2,h3,h4{ font-family:var(--font-head); font-weight:700; line-height:1.05; ma
   #themeToggleText{ display:none; }
   .hamburger{ display:flex; }
 
-  .toolbar{ position:static; flex-direction:column; align-items:stretch; }
+  .toolbar{ position:static; flex-direction:column; flex-wrap:nowrap; align-items:stretch; }
   .filter-pills{ overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px; }
 
   .grid{ grid-template-columns:1fr 1fr; gap:14px; }
