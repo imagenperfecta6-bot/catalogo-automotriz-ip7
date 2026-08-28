@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo Automotriz 2026 | Imagen Perfecta Sie7e</title>
+<meta name="description" content="Catálogo interactivo de productos promocionales para el sector automotriz. Imagen Perfecta Sie7e — Asesores en Marketing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1120'/%3E%3Cpath d='M20 46V18h9l7 12 7-12h9v28h-8V32l-8 13-8-13v14z' fill='%233b82f6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  // Aplica el tema guardado antes de pintar la página, para evitar parpadeo.
+  try {
+    var savedTheme = localStorage.getItem("ip7_theme");
+    if (savedTheme === "light") document.documentElement.setAttribute("data-theme", "light");
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<div id="cursor-ring" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="headlightFlash" aria-hidden="true"></div>
+
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#top" class="brand">
+      <img src="assets/img/brand/logo-blanco.png" alt="Imagen Perfecta Sie7e — Asesores en Marketing" class="brand-logo logo-dark" onerror="this.onerror=null;this.src='assets/img/brand/logo.jpg';">
+      <img src="assets/img/brand/logo-azul.png" alt="Imagen Perfecta Sie7e — Asesores en Marketing" class="brand-logo logo-light" onerror="this.onerror=null;this.src='assets/img/brand/logo.jpg';">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#catalogo" data-close>Productos</a>
+      <a href="#categorias" data-close>Categorías</a>
+      <a href="#cotizar" data-close class="js-open-drawer">Mis productos</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo día">
+        <span class="theme-toggle-icon" id="themeToggleIcon" aria-hidden="true"></span>
+        <span id="themeToggleText">Ver de día</span>
+      </button>
+      <button class="cart-chip js-open-drawer" type="button" aria-label="Ver productos seleccionados">
+        <span class="cart-chip-icon">🛒</span>
+        <span id="cartChipText">0 productos seleccionados</span>
+      </button>
+      <button class="btn btn-primary btn-sm js-open-whatsapp" type="button">Contactar a mi ejecutivo</button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img id="heroCarImg" alt="" aria-hidden="true">
+      <script>
+        document.getElementById("heroCarImg").src = document.documentElement.getAttribute("data-theme") === "light"
+          ? "assets/img/brand/hero-car-day.jpg"
+          : "assets/img/brand/hero-car-night.jpg";
+      </script>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <a href="#catalogo" class="scroll-hint" aria-label="Ir al catálogo"><span></span></a>
+  </section>
+
+  <section class="catalog" id="catalogo">
+    <div class="section-head section-head-main">
+      <span class="eyebrow">Catálogo Automotriz 2026</span>
+      <h1 id="categorias">PRODUCTOS QUE HACEN QUE<br>TU MARCA <span class="text-accent">SE MUEVA</span></h1>
+      <p>Descubre nuestra selección de productos promocionales para el sector automotriz y encuentra opciones para llevar tu marca más lejos durante esta temporada.</p>
+      <div class="hero-actions">
+        <a href="#toolbar" class="btn btn-primary btn-lg">Explorar productos</a>
+        <button class="btn btn-outline btn-lg js-open-whatsapp" type="button">Contactar a mi ejecutivo</button>
+      </div>
+    </div>
+
+    <div class="toolbar" id="toolbar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" placeholder="¿Qué producto estás buscando?" autocomplete="off">
+      </div>
+      <div class="filter-pills" id="filterPills">
+        <button class="pill is-active" data-filter="todos" type="button">Todos</button>
+        <button class="pill" data-filter="boutique" type="button">Boutique</button>
+        <button class="pill" data-filter="accesorios" type="button">Accesorios</button>
+        <button class="pill" data-filter="viaje" type="button">Viaje</button>
+        <button class="pill" data-filter="tecnologia" type="button">Tecnología</button>
+        <button class="pill" data-filter="cafe" type="button">Café</button>
+        <button class="pill" data-filter="herramientas" type="button">Herramientas</button>
+        <button class="pill" data-filter="llaveros" type="button">Llaveros</button>
+        <button class="pill" data-filter="litografia" type="button">Litografía</button>
+        <button class="pill" data-filter="comestibles" type="button">Comestibles</button>
+        <button class="pill" data-filter="sets" type="button">Sets</button>
+        <button class="pill" data-filter="paraguas" type="button">Paraguas</button>
+        <button class="pill" data-filter="bolsas" type="button">Bolsas</button>
+      </div>
+    </div>
+
+    <div id="noResults" class="no-results" hidden>
+      <p>No encontramos productos con ese criterio.</p>
+      <button class="btn btn-outline btn-sm" id="clearFilters" type="button">Limpiar filtros</button>
+    </div>
+
+    <div id="catalogSections"></div>
+
+  </section>
+
+  <section class="closing-cta" id="cotizar">
+    <div class="closing-cta-inner">
+      <span class="eyebrow">Último paso</span>
+      <h2>¿Ya elegiste tus productos?</h2>
+      <p>Revisa tu selección y envíanos tu solicitud de cotización. Nuestro equipo comercial te contactará antes de finalizar la feria.</p>
+      <button class="btn btn-primary btn-lg js-open-drawer" type="button">Ver mi selección</button>
+    </div>
+  </section>
+
+
+  <div class="inline-cta inline-cta-final">
+    <div class="inline-cta-text">
+      <h4>¿No encuentras lo que buscas?</h4>
+      <p>Contacta a nuestros ejecutivos y te ayudamos a encontrar la opción ideal para tu marca.</p>
+    </div>
+    <button type="button" class="btn btn-outline btn-sm js-open-whatsapp">Hablar con un ejecutivo</button>
+  </div>
+
+</main>
+
+<footer class="site-footer" id="contacto">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/brand/logo-blanco.png" alt="Imagen Perfecta Sie7e" class="footer-logo logo-dark" onerror="this.onerror=null;this.src='assets/img/brand/logo.jpg';">
+      <img src="assets/img/brand/logo-azul.png" alt="Imagen Perfecta Sie7e" class="footer-logo logo-light" onerror="this.onerror=null;this.src='assets/img/brand/logo.jpg';">
+      <p>Asesores en Marketing · Productos promocionales.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>✉️ <a href="mailto:mercadeo@ip7.com.co">mercadeo@ip7.com.co</a></p>
+      <p>📍 Cl. 72A #63-12, Bogotá</p>
+    </div>
+    <div class="footer-col">
+      <h4>Catálogo</h4>
+      <p><a href="#catalogo">Ver todos los productos</a></p>
+      <p><a href="#" class="js-open-drawer">Mis productos seleccionados</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Imagen Perfecta Sie7e. Todos los derechos reservados.</span>
+    <span class="footer-bottom-sep">·</span>
+    <span>Creado por <a href="https://www.linkedin.com/in/sneyther-linares-576265230/" target="_blank" rel="noopener" style="text-decoration: underline;">Sneyther Linares</a>, Coordinador Comercial y de Mercadeo</span>
+  </div>
+</footer>
+
+<!-- Floating mobile contact bar -->
+<div class="mobile-bar" id="mobileBar">
+  <button class="mobile-bar-item js-open-drawer" type="button">
+    <span class="mb-icon">🧾</span><span>Cotizar</span>
+    <span class="mb-badge" id="mobileCartBadge" hidden>0</span>
+  </button>
+  <button class="mobile-bar-item js-open-whatsapp" type="button">
+    <span class="mb-icon">🧑‍💼</span><span>Ejecutivo</span>
+  </button>
+</div>
+
+<!-- Desktop floating cart button -->
+<button class="cart-fab js-open-drawer" id="cartFab" type="button" aria-label="Ver mis productos seleccionados">
+  <span class="cart-fab-icon">🛒</span>
+  <span class="cart-fab-count" id="cartFabCount">0</span>
+</button>
+
+<!-- Cart / selection drawer -->
+<div class="backdrop" id="backdrop"></div>
+<aside class="drawer" id="cartDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>🛒 Mis productos seleccionados</h3>
+    <button class="icon-btn js-close-panels" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <p class="drawer-empty" id="drawerEmpty">Aún no has seleccionado productos. Explora el catálogo y agrega los que te interesen.</p>
+    <ul class="drawer-list" id="drawerList"></ul>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-primary btn-lg btn-block" id="goToQuoteBtn" type="button" disabled>Solicitar cotización</button>
+  </div>
+</aside>
+
+<!-- Quote request modal -->
+<div class="modal" id="quoteModal" aria-hidden="true">
+  <div class="modal-card modal-card-lg">
+    <button class="icon-btn modal-close js-close-panels" aria-label="Cerrar">✕</button>
+    <div class="modal-head">
+      <span class="eyebrow">Solicitud de cotización</span>
+      <h3>Quiero estos productos</h3>
+      <p>Completa tus datos y te contactaremos con tu cotización personalizada.</p>
+    </div>
+    <form id="quoteForm">
+      <div class="form-grid">
+        <label class="field field-full">
+          <span>¿A quién quieres dirigir tu cotización? *</span>
+          <select name="ejecutivo" id="executivoSelect" required>
+            <option value="" disabled selected>Selecciona un comercial</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Nombre *</span>
+          <input type="text" name="nombre" required>
+        </label>
+        <label class="field">
+          <span>Empresa *</span>
+          <input type="text" name="empresa" required>
+        </label>
+        <label class="field">
+          <span>Correo electrónico *</span>
+          <input type="email" name="correo" required>
+        </label>
+        <label class="field">
+          <span>Teléfono *</span>
+          <input type="tel" name="telefono" required>
+        </label>
+        <label class="field field-full">
+          <span>Ciudad</span>
+          <input type="text" name="ciudad">
+        </label>
+        <label class="field field-full">
+          <span>Comentarios adicionales</span>
+          <textarea name="comentarios" rows="3" placeholder="Cuéntanos detalles como tiempos de entrega, personalización, colores, etc."></textarea>
+        </label>
+      </div>
+
+      <div class="quote-summary">
+        <h4>Productos seleccionados</h4>
+        <ul id="quoteSummaryList" class="quote-summary-list"></ul>
+      </div>
+
+      <div class="quote-actions">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar solicitud por correo</button>
+        <div class="quote-actions-row">
+          <button type="button" class="btn btn-outline btn-sm" id="copyRequestBtn">Copiar solicitud</button>
+        </div>
+        <p class="quote-hint">Al enviar, se abrirá tu cliente de correo con la solicitud lista para confirmar el envío directamente al comercial que elegiste.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- WhatsApp executive picker -->
+<div class="modal" id="whatsappModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="icon-btn modal-close js-close-panels" aria-label="Cerrar">✕</button>
+    <div class="modal-head">
+      <span class="eyebrow">Asesoría inmediata</span>
+      <h3>Habla con tu ejecutivo</h3>
+      <p>Elige a quién quieres escribirle por WhatsApp.</p>
+    </div>
+    <div class="contact-options" id="whatsappExecutivesList"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<template id="cardTemplate">
+  <article class="card">
+    <div class="card-media">
+      <img loading="lazy" src="" alt="">
+      <span class="card-code"></span>
+      <button type="button" class="gallery-arrow gallery-prev" aria-label="Foto anterior">‹</button>
+      <button type="button" class="gallery-arrow gallery-next" aria-label="Foto siguiente">›</button>
+      <div class="gallery-dots"></div>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title"></h3>
+      <p class="card-desc"></p>
+      <ul class="card-features"></ul>
+      <div class="card-qty">
+        <span class="qty-label">Cantidad</span>
+        <div class="qty-control">
+          <button type="button" class="qty-btn qty-minus" aria-label="Restar">–</button>
+          <input type="number" class="qty-input" max="50000" inputmode="numeric">
+          <button type="button" class="qty-btn qty-plus" aria-label="Sumar">+</button>
+        </div>
+        <div class="qty-presets"></div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block card-add">Agregar al carrito</button>
+    </div>
+  </article>
+</template>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Editor de fotos — estilos propios de admin.html (reutiliza tokens de styles.css) */
+
+body{ overflow-x:hidden; }
+
+.admin-header{
+  background:var(--surface); border-bottom:1px solid var(--border-soft);
+  padding:20px 28px;
+}
+.admin-header-inner{
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.admin-back{ color:var(--text-muted); font-size:.9rem; font-weight:600; flex-shrink:0; }
+.admin-back:hover{ color:var(--blue-light); }
+.admin-header-inner h1{
+  font-family:var(--font-head); font-size:1.5rem; color:var(--text); flex:1; text-transform:uppercase; letter-spacing:.3px;
+}
+.admin-folder-status{
+  max-width:1200px; margin:12px auto 0; font-size:.82rem; color:var(--text-faint);
+}
+
+.admin-main{ max-width:1200px; margin:0 auto; padding:32px 28px 100px; }
+.admin-intro{
+  background:var(--surface-2); border:1px solid var(--border-soft); border-radius:var(--radius);
+  padding:18px 22px; margin-bottom:28px;
+}
+.admin-intro p{ color:var(--text-muted); font-size:.9rem; margin:0 0 8px; line-height:1.6; }
+.admin-intro p:last-child{ margin-bottom:0; }
+.admin-intro code{
+  background:var(--surface-3); padding:2px 6px; border-radius:6px; font-size:.85em;
+}
+.admin-hint{ color:var(--text-faint) !important; font-size:.82rem !important; }
+
+.admin-toolbar{ margin-bottom:28px; max-width:420px; }
+
+.admin-category{ margin-bottom:40px; }
+.admin-category h2{
+  font-family:var(--font-head); text-transform:uppercase; letter-spacing:.4px;
+  font-size:1.3rem; color:var(--text); margin-bottom:16px;
+  padding-bottom:10px; border-bottom:1px solid var(--border-soft);
+}
+.admin-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:16px;
+}
+.admin-slot{
+  background:var(--surface-2); border:1px solid var(--border-soft); border-radius:14px;
+  overflow:hidden; cursor:pointer; transition:border-color .18s ease, transform .15s ease;
+}
+.admin-slot:hover{ border-color:var(--blue-light); transform:translateY(-2px); }
+.admin-slot-media{ aspect-ratio:1/1; background:var(--surface-3); overflow:hidden; }
+.admin-slot-media img{ width:100%; height:100%; object-fit:cover; }
+.admin-slot-info{ padding:10px 12px; }
+.admin-slot-info h5{ font-size:.85rem; color:var(--text); margin:0 0 2px; font-weight:700; }
+.admin-slot-info span{ font-size:.72rem; color:var(--text-faint); }
+.admin-slot-hidden{ display:none; }
+
+.editor-body{ margin-bottom:22px; }
+.editor-dropzone{ display:flex; justify-content:center; }
+.editor-stage{
+  position:relative; width:100%; max-width:340px; aspect-ratio:1/1;
+  background:var(--bg-soft); border:2px dashed var(--border); border-radius:16px;
+  overflow:hidden; cursor:pointer; display:flex; align-items:center; justify-content:center;
+}
+.editor-stage canvas{ width:100%; height:100%; display:block; touch-action:none; cursor:grab; }
+.editor-stage canvas:active{ cursor:grabbing; }
+.editor-stage.has-image{ border-style:solid; }
+.editor-empty{ position:absolute; color:var(--text-faint); font-size:.85rem; text-align:center; padding:0 20px; pointer-events:none; }
+
+.editor-controls{
+  display:flex; align-items:center; justify-content:center; gap:16px; margin-top:18px; flex-wrap:wrap;
+}
+.editor-zoom{ display:flex; align-items:center; gap:10px; font-size:.82rem; color:var(--text-muted); font-weight:600; }
+.editor-zoom input{ width:160px; }
+
+.editor-actions{ display:flex; flex-direction:column; gap:10px; }

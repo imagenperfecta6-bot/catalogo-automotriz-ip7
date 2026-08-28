@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor de fotos — Catálogo Automotriz</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1120'/%3E%3Cpath d='M20 46V18h9l7 12 7-12h9v28h-8V32l-8 13-8-13v14z' fill='%233b82f6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+  <div class="admin-header-inner">
+    <a href="index.html" class="admin-back">← Volver al catálogo</a>
+    <h1>Editor de fotos del catálogo</h1>
+    <button class="btn btn-outline btn-sm" id="connectFolderBtn" type="button">📁 Conectar carpeta de imágenes</button>
+  </div>
+  <p class="admin-folder-status" id="folderStatus">Carpeta no conectada — puedes editar y descargar las fotos igual, solo tendrás que arrastrarlas tú mismo a la carpeta.</p>
+</header>
+
+<main class="admin-main">
+  <div class="admin-intro">
+    <p><strong>Cómo funciona:</strong> elige una foto de tu computador, ajústala dentro del recuadro (arrastra para mover, usa el control para acercar/alejar) y guarda. Si conectaste la carpeta <code>assets/img/productos</code>, el archivo se reemplaza automáticamente con el nombre correcto — no necesitas tocar código ni el catálogo. Recárgalo (F5) para ver el cambio.</p>
+    <p class="admin-hint">Recomendado: sube fotos de al menos 1200×1200 px para que se vean nítidas. El tamaño final que se guarda es 1200×1200 px, formato JPG.</p>
+  </div>
+
+  <div class="admin-toolbar">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="adminSearch" placeholder="Buscar producto...">
+    </div>
+  </div>
+
+  <div id="adminSections"></div>
+</main>
+
+<!-- Editor modal -->
+<div class="modal" id="editorModal" aria-hidden="true">
+  <div class="modal-card modal-card-lg">
+    <button class="icon-btn modal-close" id="editorClose" aria-label="Cerrar">✕</button>
+    <div class="modal-head">
+      <span class="eyebrow" id="editorProductLabel">Producto</span>
+      <h3 id="editorFileName">archivo.jpg</h3>
+      <p>Elige una foto, ajústala dentro del recuadro y guarda.</p>
+    </div>
+
+    <div class="editor-body">
+      <div class="editor-dropzone" id="editorDropzone">
+        <input type="file" accept="image/*" id="editorFileInput" hidden>
+        <div class="editor-stage" id="editorStage">
+          <canvas id="editorCanvas" width="500" height="500"></canvas>
+          <p class="editor-empty" id="editorEmptyHint">Haz clic o arrastra una foto aquí</p>
+        </div>
+      </div>
+
+      <div class="editor-controls" id="editorControls" hidden>
+        <label class="editor-zoom">
+          <span>Zoom</span>
+          <input type="range" id="editorZoom" min="100" max="300" value="100">
+        </label>
+        <button class="btn btn-outline btn-sm" id="editorChangePhoto" type="button">Elegir otra foto</button>
+      </div>
+    </div>
+
+    <div class="editor-actions">
+      <button class="btn btn-primary btn-lg btn-block" id="editorSaveFolder" type="button" disabled>Guardar en la carpeta</button>
+      <button class="btn btn-outline btn-lg btn-block" id="editorDownload" type="button" disabled>Descargar imagen</button>
+      <p class="quote-hint" id="editorSaveHint"></p>
+    </div>
+  </div>
+</div>
+
+<div class="backdrop" id="editorBackdrop"></div>
+<div class="toast" id="adminToast"></div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
