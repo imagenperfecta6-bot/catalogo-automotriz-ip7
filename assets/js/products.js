@@ -332,10 +332,7 @@ const PRODUCTS = [
     description: "Nevera cooler cilíndrica con correa ajustable, práctica para llevar al hombro.",
     features: ["Diseño cilíndrico", "Correa ajustable", "Bolsillo frontal"],
     minQty: 20,
-    images: [
-      "assets/img/productos/nevera-cooler-joplin-va839-1.jpg",
-      "assets/img/productos/nevera-cooler-joplin-va839-2.jpg",
-    ],
+    images: ["assets/img/productos/nevera-cooler-joplin-va839-1.jpg"],
   },
   {
     id: "nevera-cooler-origin-rpet-va1231",
@@ -573,6 +570,19 @@ const PRODUCTS = [
     images: [
       "assets/img/productos/carrito-mercado-shopper-va811-1.jpg",
       "assets/img/productos/carrito-mercado-shopper-va811-2.jpg",
+    ],
+  },
+  {
+    id: "toalla-solara-vi0349",
+    name: "Toalla Solara",
+    code: "VI0349",
+    category: "viaje",
+    description: "Toalla a rayas con cierre de caucho integrado. Diseño amplio, colores vivos y acabado de calidad; perfecta para playa, piscina o deporte.",
+    features: ["Cierre de caucho integrado", "Diseño amplio", "Varios colores"],
+    minQty: 5,
+    images: [
+      "assets/img/productos/toalla-solara-vi0349-1.jpg",
+      "assets/img/productos/toalla-solara-vi0349-2.jpg",
     ],
   },
 
@@ -964,6 +974,16 @@ const PRODUCTS = [
 
   // ---------------- COMESTIBLES ----------------
   {
+    id: "galletas-fortuna",
+    name: "Galletas de la Fortuna",
+    code: "N/D",
+    category: "comestibles",
+    description: "Una galleta de la fortuna es una galleta dulce y dorada, con una forma muy especial cuya principal característica es que contiene un mensaje en su interior. Por eso despierta curiosidad entre pequeños y grandes, que quieren ver qué les salió dentro de la galleta.",
+    features: ["Mensaje personalizable en el interior", "Despierta curiosidad", "Ideal para eventos"],
+    minQty: 100,
+    images: ["assets/img/productos/galletas-fortuna-1.jpg"],
+  },
+  {
     id: "chocolates-colflex",
     name: "Chocolates",
     code: "COL-FLEX",
@@ -1238,5 +1258,15 @@ const PRODUCTS = [
       "assets/img/productos/bolsa-algodon-mola-c591-1.jpg",
       "assets/img/productos/bolsa-algodon-mola-c591-2.jpg",
     ],
+  },
+  {
+    id: "bolsa-cargo-bo0497",
+    name: "Bolsa Cargo",
+    code: "BO0497",
+    category: "bolsas",
+    description: "Bolsa térmica reutilizable con cierre de velcro, interior en lámina de aluminio que mantiene el frío hasta 4 horas y el calor hasta 6 horas. Superficie impermeable y resistente a manchas, fácil de limpiar. Ecológica, duradera y perfecta para el mercado, picnic, gimnasio o el día a día.",
+    features: ["Frío hasta 4h / calor hasta 6h", "Impermeable", "Cierre de velcro"],
+    minQty: 5,
+    images: ["assets/img/productos/bolsa-cargo-bo0497-1.jpg"],
   },
 ];

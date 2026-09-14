@@ -744,6 +744,11 @@ h1,h2,h3,h4{ font-family:var(--font-head); font-weight:700; line-height:1.05; ma
   .hamburger{ display:flex; }
 
   .toolbar{ position:static; flex-direction:column; flex-wrap:nowrap; align-items:stretch; }
+  /* En fila, flex:1 1 240px usa esos 240px como ancho mínimo — pero al
+     pasar el toolbar a columna, ese mismo valor se interpreta como ALTO
+     (es el eje principal en column), dejando el buscador gigante. Se
+     quita el basis para que en móvil solo tome su alto natural. */
+  .search-box{ flex:none; }
   .filter-pills{ overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px; }
 
   .grid{ grid-template-columns:1fr 1fr; gap:14px; }
